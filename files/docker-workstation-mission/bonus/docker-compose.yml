@@ -1,0 +1,23 @@
+# 보너스: Docker Compose 기초 / 멀티 컨테이너 예시
+# 실행: docker compose up -d   /   종료: docker compose down
+# 상태: docker compose ps      /   로그: docker compose logs -f
+
+services:
+  web:
+    build:
+      context: ../app
+    ports:
+      - "8080:80"
+    environment:
+      - APP_ENV=dev
+    volumes:
+      - ../app/src:/usr/share/nginx/html
+
+  # TODO 🔲 : 보조 서비스 예시 (예: redis, db 등) — 필요 시 주석 해제 후 사용
+  # cache:
+  #   image: redis:alpine
+  #   ports:
+  #     - "6379:6379"
+
+# TODO 🔲 : 컨테이너 간 네트워크 통신 확인 방법을 docs/ 또는 README에 기록하세요.
+# 예: docker compose exec web ping cache
