@@ -45,9 +45,9 @@ origin	https://github.com/Machinity/codyssey-e1-1-devenv-sg.git (push)
 연동 증거 스크린샷: [screenshots/github-vscode/](../screenshots/github-vscode/) 🔲
 
 ## Git vs GitHub 역할 차이 메모
-🔲 (예: Git은 로컬에서 변경 이력을 관리하는 분산 버전관리 시스템이고, GitHub은 그 Git
+🔲 Git은 로컬에서 변경 이력을 관리하는 분산 버전관리 시스템이고, GitHub은 그 Git
 저장소를 원격에서 호스팅하며 협업 기능(PR, 이슈, 코드리뷰, Actions 등)을 제공하는
-클라우드 플랫폼이다.)
+클라우드 플랫폼이다.
 
 ## 보안 확인
 - [ ] 위 로그/스크린샷에 토큰, 비밀번호, 개인키가 노출되지 않음을 확인함
