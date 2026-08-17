@@ -1,7 +1,7 @@
 # 06. 커스텀 이미지 제작 로그
 
 ## 선택한 방식
-✅ Linux 베이스 이미지(ubuntu 계열) + 패키지/사용자/환경변수 추가
+Linux 베이스 이미지(ubuntu 계열) + 패키지/사용자/환경변수 추가
 
 ## 사용한 기존 베이스
 - 베이스 이미지: `osrf/ros:jazzy-desktop-full` (OSRF 공식 이미지, Ubuntu 24.04 Noble + ROS2 Jazzy + RViz2 + Gazebo 포함)
@@ -26,9 +26,8 @@ Dockerfile 원본은 [`app/Dockerfile`](../app/Dockerfile) 참고.
 ## 빌드 및 실행 로그
 
 ```bash
-🔲 $ cd app
-🔲 $ docker build -t ros2-dev:1.0 .
-% docker build --no-cache -t ros2-dev:1.0 .
+✅ $ cd app
+✅ $ docker build -t ros2-dev:1.0 .
 [+] Building 94.7s (11/11) FINISHED                                                                            docker:orbstack
  => [internal] load build definition from Dockerfile                                                                      0.1s
  => => transferring dockerfile: 4.16kB                                                                                    0.0s
@@ -47,14 +46,14 @@ Dockerfile 원본은 [`app/Dockerfile`](../app/Dockerfile) 참고.
  => => writing image sha256:87d68235fc1b51afb96f56f3fcaa18cc0748a96a971b55faa7cbee5a0fbf18a0                              0.0s 
  => => naming to docker.io/library/ros2-dev:1.0      
 
-🔲 $ docker run -it --rm ros2-dev:1.0 bash -c "echo \$ROS_DISTRO; echo \$ROS_DOMAIN_ID; whoami"
+✅ $ docker run -it --rm ros2-dev:1.0 bash -c "echo \$ROS_DISTRO; echo \$ROS_DOMAIN_ID; whoami"
 jazzy
 42
 ros
 ```
 
-빌드/실행 스크린샷: 🔲 (필요 시 `screenshots/custom-image/`에 저장 후 여기 링크) custom_build.png
+빌드/실행 스크린샷: ✅ (../screenshots/custom-image/custom_build.png)
 
 ## 검증 메모
-🔲 `whoami` 실행 시 root가 아닌 `ros` 사용자로 진입되는지, `echo $ROS_DOMAIN_ID`로
-환경변수가 42로 설정되어 있는지 등을 확인하여 커스텀 포인트가 실제로 적용되었음을 검증
+`whoami` 실행 시 root가 아닌 `ros` 사용자로 진입되는지, `echo $ROS_DOMAIN_ID`로
+환경변수가 42로 설정되어 있는지 등을 확인하여 커스텀 포인트가 실제로 적용되었음을 검증함

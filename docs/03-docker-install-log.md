@@ -4,10 +4,10 @@
 > 터미널에서 기존과 동일하게 `docker` 명령 사용 가능.
 
 ```bash
-🔲 $ docker --version
+✅ $ docker --version
 Docker version 28.5.2, build ecc6942
 
-🔲 $ docker info
+✅ $ docker info
 Client:
  Version:    28.5.2
  Context:    orbstack
@@ -107,6 +107,6 @@ WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
 ```
 
 ## 확인 결과 요약
-- Docker 버전: 🔲
-- 데몬 동작 여부: 🔲 (정상 / 비정상 — 비정상 시 트러블슈팅 문서로 링크)
-- 사용한 런타임: 🔲 (Docker Desktop / OrbStack 등)
+- Docker 버전: 28.5.2
+- 데몬 동작 여부: ✅ 정상
+- 사용한 런타임: io.containerd.runc.v2 runc
