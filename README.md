@@ -1,7 +1,7 @@
 # 개발 워크스테이션 구축 — 터미널 / Docker / Git·GitHub
 
-> ✅ 표시된 부분은 미션 요구사항입니다.
-> 이 문서 하나만 읽어도 전체 수행 내용과 증거 위치를 파악할 수 있도록 작성합니다.
+> ✅ 표시된 부분은 미션 요구사항
+> 이 문서 하나만 읽어도 전체 수행 내용과 증거 위치를 파악할 수 있도록 작성함.
 
 ---
 
@@ -19,8 +19,7 @@
 
 | 항목 | 값 |
 |---|---|
-| OS | ProductName:		macOS
-ProductVersion:		15.7.4 |
+| OS | ProductName: macOS, ProductVersion: 15.7.4 |
 | Shell / Terminal | zsh |
 | 컨테이너 런타임 | OrbStack — 서울캠퍼스 sudo 제약으로 Docker Desktop 대신 사용 |
 | Docker 버전 | Docker version 28.5.2, build ecc6942 |
@@ -61,7 +60,7 @@ git version 2.53.0
 - [x] Docker 볼륨 영속성 증거 (`docs/09-volume-log.md`, `screenshots/volume/`)
 - [x] Git 설정 + VSCode-GitHub 연동 (`docs/10-git-github-log.md`, `screenshots/github-vscode/`)
 - [x] 트러블슈팅 2건 이상 (`docs/11-troubleshooting.md`)
-- [ ] (보너스) Docker Compose (`bonus/docker-compose.yml`)
+- [x] (보너스) Docker Compose (`bonus/docker-compose.yml`)
 
 ---
 
@@ -100,10 +99,10 @@ git version 2.53.0
 
 ## 5. 과제 목표 개념 정리 (자기 설명)
 
-✅ **절대 경로 vs 상대 경로**
+✅ **절대 경로 vs 상대 경로**  
 절대 경로는 루트(Root) 디렉터리를 기점으로 전체 계층 구조를 모두 표기하는 방식으로, 내 로컬 환경에서는 실행 위치와 관계없이 항상 동일한 파일을 참조하므로 데이터 로드의 안정성이 높다. 반면, 상대 경로는 현재 작업 디렉터리(PWD)를 기준으로 .(현재)이나 ..(상위) 등의 축약어를 사용해 파일 위치를 지정한다. 프로그램을 타 장치에 배포하거나 이식할 때, 사용자마다 루트 이하의 디렉터리 구조나 사용자명이 다를 수 있다. 따라서 배포용 프로그램이나 프로젝트 내부 자원을 참조할 때는 애플리케이션 구조 내에서 유연하게 대응할 수 있는 상대 경로로 작성하는 것이 훨씬 안전하고 이식성이 높다.
 
-✅ **파일 권한 (r/w/x, 755, 644)**
+✅ **파일 권한 (r/w/x, 755, 644)**  
 숫자 위치:
 첫번째 - User / 두번째 - Group / 세번째 - Other
 
@@ -114,25 +113,25 @@ git version 2.53.0
 755 = 소유자 rwx / 그룹 r-x / 기타 r-x
 644 = 소유자 rw- / 그룹 r-- / 기타 r--.
 
-✅ **기존 Dockerfile 기반 커스텀 이미지**
+✅ **기존 Dockerfile 기반 커스텀 이미지**  
 <app/Dockerfile>
 
-✅ **포트 매핑이 필요한 이유**
+✅ **포트 매핑이 필요한 이유**  
 컨테이너는 격리된 네트워크 네임스페이스를 가지므로, 호스트에서 컨테이너 내부 포트에
 직접 접근할 수 없다. `-p host:container`로 호스트 포트와 컨테이너 포트를 연결해야
 외부에서 서비스에 접근 가능하다. 같은 컨테이너 내부 포트(8080)를 서로 다른 host
 포트(8080, 8081)로 동시에 노출할 수 있음을 두 번의 실행으로 확인함.
 
-✅ **Docker 볼륨(영속 데이터)**
+✅ **Docker 볼륨(영속 데이터)**  
 볼륨은 컨테이너 생명주기와 독립적으로 Docker가 관리하는 별도의 저장 영역이라,
 컨테이너를 삭제해도 볼륨 자체를 삭제하지 않는 한 데이터가 보존됨을 확인함.
 
-✅ **Git vs GitHub 역할 차이**
+✅ **Git vs GitHub 역할 차이**  
 Git은 로컬에서 변경 이력을 관리하는 버전관리 시스템이고, GitHub은 그 Git 저장소를 원격에서 호스팅하며 협업(PR, 이슈, 코드리뷰 등)을 지원하는 플랫폼이다.
 
 ---
 
-## 6. 보너스 과제 (선택, 수행 시 체크)
+## 6. 보너스 과제 (요약, 상세는 [docs/12-bonus-log.md](./docs/12-bonus-log.md))
 
 - [x] Docker Compose 기초 — [bonus/docker-compose.yml](./bonus/docker-compose.yml)
 - [x] Compose 멀티 컨테이너

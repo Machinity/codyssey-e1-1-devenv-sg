@@ -50,7 +50,7 @@ To https://github.com/Machinity/codyssey-e1-1-devenv-sg.git
    03f7bdd..0c84aad  main -> main
 ```
 
-연동 증거 스크린샷: ✅ [screenshots/github-vscode/](../screenshots/github-vscode/) 
+연동 증거 스크린샷: ✅ [screenshots/github-vscode/](./screenshots/github-vscode/)
 
 ## Git vs GitHub 역할 차이 메모
 Git은 로컬에서 변경 이력을 관리하는 분산 버전관리 시스템이고, GitHub은 그 Git

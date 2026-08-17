@@ -190,6 +190,15 @@ origin	git@github.com:machinity/https://github.com/Machinity/codyssey-e1-1-deven
 origin	git@github.com:machinity/https://github.com/Machinity/codyssey-e1-1-devenv-sg.git.git (push)
 
 ✅ $ git push
+오브젝트 나열하는 중: 41, 완료.
+오브젝트 개수 세는 중: 100% (41/41), 완료.
+Delta compression using up to 6 threads
+오브젝트 압축하는 중: 100% (38/38), 완료.
+오브젝트 쓰는 중: 100% (39/39), 1.61 MiB | 9.33 MiB/s, 완료.
+Total 39 (delta 1), reused 18 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Machinity/codyssey-e1-1-devenv-sg.git
+   18a49c1..b5ebb65  main -> main
 ```
 
 ## 배움 포인트 메모

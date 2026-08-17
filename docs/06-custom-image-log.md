@@ -52,7 +52,7 @@ jazzy
 ros
 ```
 
-빌드/실행 스크린샷: ✅ (../screenshots/custom-image/custom_build.png)
+빌드/실행 스크린샷: ✅ [screenshots/custom-image/custom_build.png](./screenshots/custom-image/custom_build.png)
 
 ## 검증 메모
 `whoami` 실행 시 root가 아닌 `ros` 사용자로 진입되는지, `echo $ROS_DOMAIN_ID`로
