@@ -1,0 +1,25 @@
+# 보너스: Docker Compose 기초 / 멀티 컨테이너 예시
+# 실행: docker compose up -d   /   종료: docker compose down
+# 상태: docker compose ps      /   로그: docker compose logs -f
+#
+# ros2-dev: app/Dockerfile(ROS2 Jazzy 커스텀 이미지)를 빌드해 실행.
+#           python3 -m http.server로 워크스페이스를 노출(포트 매핑 실습과 동일한 방식).
+# cache   : 보조 서비스(redis). ros2-dev 컨테이너에는 iproute2/iputils-ping이 이미
+#           설치되어 있으므로, ping으로 서비스 디스커버리(컨테이너 간 이름 기반 통신)를 검증한다.
+
+services:
+  ros2-dev:
+    build:
+      context: ../app
+    container_name: ros2-dev-compose
+    ports:
+      - "${HOST_PORT:-8080}:${HTTP_PORT:-8080}"
+    environment:
+      - HTTP_PORT=${HTTP_PORT:-8080}
+    volumes:
+      - ./workspace:/ros2_ws
+    command: bash -c "python3 -m http.server ${HTTP_PORT:-8080} --directory /ros2_ws"
+
+  cache:
+    image: redis:alpine
+    container_name: cache-compose
