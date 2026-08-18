@@ -27,7 +27,7 @@ c0129541456e19353a31625f5b519ca4085e02ccaf82979b317f94cf353c5939
 hi
 ```
 
-스크린샷/로그: ✅ [/screenshots/volume/volume_test.png](./screenshots/volume/volume_test.png)
+스크린샷/로그: ✅ [/screenshots/volume/volume_test.png](../screenshots/volume/volume_test.png)
 
 ## 관찰 메모
 볼륨은 컨테이너 생명주기와 독립적으로 Docker가 관리하는 별도의 저장 영역이라,

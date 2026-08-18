@@ -30,7 +30,7 @@ b36647bf7921d5b94acb0937383fc4e00c5b9062dfe9eb48c5c55c8fadee0fb7
 </html>
 ```
 
-브라우저 접속 스크린샷: ✅ [/screenshots/port-mapping/port8080.png](./screenshots/port-mapping/port8080.png)
+브라우저 접속 스크린샷: ✅ [/screenshots/port-mapping/port8080.png](../screenshots/port-mapping/port8080.png)
 
 ## 2차 실행 (다른 host 포트 8081)
 
@@ -58,7 +58,7 @@ b36647bf7921d5b94acb0937383fc4e00c5b9062dfe9eb48c5c55c8fadee0fb7
 </html>
 ```
 
-브라우저 접속 스크린샷: ✅ [/screenshots/port-mapping/port8081.png](./screenshots/port-mapping/port8081.png)
+브라우저 접속 스크린샷: ✅ [/screenshots/port-mapping/port8081.png](../screenshots/port-mapping/port8081.png)
 
 ## 포트 매핑이 필요한 이유 메모
 컨테이너는 격리된 네트워크 네임스페이스를 가지므로, 호스트에서 컨테이너 내부 포트에

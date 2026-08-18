@@ -31,7 +31,7 @@ c9d6cbfced3da4eae83f1b2195d34dfcc5f02800ba913b1fddb033025c9e278a
 </body>
 </html>
 ```
-스크린샷: ✅ [/screenshots/bind-mount/port8082_before.png](./screenshots/bind-mount/port8082_before.png)
+스크린샷: ✅ [/screenshots/bind-mount/port8082_before.png](../screenshots/bind-mount/port8082_before.png)
 
 ## 호스트 파일 변경
 
@@ -62,7 +62,7 @@ c9d6cbfced3da4eae83f1b2195d34dfcc5f02800ba913b1fddb033025c9e278a
 ✅ $ curl http://localhost:8082/src/test.txt
 hello ros2
 ```
-스크린샷: ✅ [/screenshots/bind-mount/port8082_after.png](./screenshots/bind-mount/port8082_after.png)
+스크린샷: ✅ [/screenshots/bind-mount/port8082_after.png](../screenshots/bind-mount/port8082_after.png)
 
 ## 관찰 메모
 바인드 마운트는 호스트 디렉터리를 컨테이너 내부 경로에 그대로 연결하는 방식이라,
