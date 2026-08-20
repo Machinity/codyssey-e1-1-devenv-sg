@@ -2,7 +2,7 @@
 
 - `Dockerfile` : `osrf/ros:jazzy-desktop-full`(Ubuntu 24.04 + ROS2 Jazzy) 베이스에
   개발 도구, Nav2/SLAM 관련 ROS2 패키지, 비root 사용자, 환경변수(`ROS_DOMAIN_ID` 등)를
-  추가한 커스텀 이미지. 요구사항 (B) "Linux 베이스 + 패키지/사용자/환경변수 추가" 방식.
+  추가한 커스텀 이미지. 요구사항 "Linux 베이스 + 패키지/사용자/환경변수 추가" 방식.
 
 이 이미지는 웹 서버가 아니라 ROS2 개발 환경이므로, **포트 매핑 / 바인드 마운트 증거는
 컨테이너 안에서 `python3 -m http.server`를 임시로 띄워** 만듭니다. (추가 패키지 설치 없이
@@ -37,8 +37,7 @@ docker run -d \
 curl http://localhost:8080
 ```
 브라우저로 `http://localhost:8080` 접속 시 `/ros2_ws` 디렉터리 목록(`src/` 등)이 보이면
-포트 매핑이 정상 동작하는 것입니다. 서로 다른 host 포트(예: 8081)로 한 번 더 실행해
-2회 이상 증거를 남기세요.
+포트 매핑이 정상 동작하는 것입니다. 
 
 ## 4) 바인드 마운트 반영 확인
 
@@ -56,4 +55,4 @@ ros2 --version
 ```
 
 결과/로그는 `../docs/06-custom-image-log.md`, `../docs/07-port-mapping-log.md`,
-`../docs/08-bind-mount-log.md`에 기록하세요.
+`../docs/08-bind-mount-log.md`에 기록
